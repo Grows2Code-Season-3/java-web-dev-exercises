@@ -24,13 +24,24 @@ public class Students {
         student3.put("lastName", "Brown");
         student3.put("grade", "7");
         student3.put("gpa", "2.5");
+        student3.put("pet", "walrus");
 
         ArrayList<HashMap<String, String>> students = new ArrayList<>();
         students.add(student1);
         students.add(student2);
         students.add(student3);
 
+        for (HashMap<String, String> student : students) {
 
+            String studentStr = "";
+
+            for (String field : student.keySet()) {
+                studentStr += field + ": " + student.get(field) + "\n";
+            }
+
+            System.out.println(studentStr);
+
+        }
     }
 
 }
