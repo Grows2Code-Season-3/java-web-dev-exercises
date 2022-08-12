@@ -25,21 +25,26 @@ public class Students {
         student3.put("grade", "7");
         student3.put("gpa", "2.5");
         student3.put("pet", "walrus");
+        student3.put("favoriteColor", "green");
 
         ArrayList<HashMap<String, String>> students = new ArrayList<>();
         students.add(student1);
         students.add(student2);
         students.add(student3);
 
+        // loop through the collection of students
         for (HashMap<String, String> student : students) {
 
-            String studentStr = "";
+            System.out.println("##########");
 
-            for (String field : student.keySet()) {
-                studentStr += field + ": " + student.get(field) + "\n";
+            // for each student, print out all of their info
+            for (String studentProp : student.keySet()) {
+                System.out.println(studentProp + ": " + student.get(studentProp));
             }
 
-            System.out.println(studentStr);
+            System.out.println("##########");
+
+            System.out.println("");
 
         }
     }
