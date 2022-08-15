@@ -1,5 +1,7 @@
 package org.launchcode.java.demos.lsn4classes2;
 
+import java.util.Objects;
+
 public class Student {
 
     private static int nextStudentId = 1;
@@ -75,6 +77,19 @@ public class Student {
 
     private void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentId);
     }
 
     public static void main(String[] args) {

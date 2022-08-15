@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Menu {
 
-    private ArrayList<MenuItem> items = new ArrayList<>();
+    private final ArrayList<MenuItem> items = new ArrayList<>();
     private Date lastUpdated;
 
     public Menu () {}
@@ -25,5 +25,17 @@ public class Menu {
 
     public Date getLastUpdated() {
         return lastUpdated;
+    }
+
+    @Override // @Override is an annotation
+    public String toString() {
+        String menuStr = "Menu (Last updated: " + this.lastUpdated + ")\n";
+        menuStr += "**************************************************\n\n";
+
+        for (MenuItem item : this.items) {
+            menuStr += item.toString() + "\n";
+        }
+
+        return menuStr;
     }
 }
