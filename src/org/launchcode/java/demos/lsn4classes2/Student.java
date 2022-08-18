@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Student {
 
     private static int nextStudentId = 1;
+
     private String name;
     private int studentId;
     private int numberOfCredits = 0;
