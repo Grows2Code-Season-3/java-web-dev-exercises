@@ -93,6 +93,11 @@ public class Student {
         return Objects.hash(studentId);
     }
 
+    @Override
+    public String toString() {
+        return this.name + " (" + this.studentId + ")";
+    }
+
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
         System.out.println("The Student class works! " + sally.getName() + " is a student!");
