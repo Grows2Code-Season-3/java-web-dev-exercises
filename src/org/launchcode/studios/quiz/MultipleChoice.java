@@ -3,8 +3,6 @@ package org.launchcode.studios.quiz;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.junit.Test;
-
 public class MultipleChoice extends Question {
 
     private ArrayList<String> possibleAnswers;
@@ -14,7 +12,6 @@ public class MultipleChoice extends Question {
         super(pointValue, text);
         this.correctAnswer = correctAnswer;
         this.possibleAnswers = possibleAnswers;
-        setPointValue(1);
     }
 
     @Override
